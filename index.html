@@ -670,20 +670,6 @@ document.getElementById('btnYes').addEventListener('click',()=>{
   launchProposalHearts(); // lluvia de corazones al decir sí
 });
 
-/* Botón No — huye al hacer hover/touch en móvil */
-const btnNo = document.getElementById('btnNo');
-function escapeBtn(){
-  const maxX = window.innerWidth  - 120;
-  const maxY = window.innerHeight - 60;
-  const rx = Math.random()*maxX;
-  const ry = Math.random()*maxY;
-  btnNo.style.position='fixed';
-  btnNo.style.left=rx+'px';
-  btnNo.style.top=ry+'px';
-  btnNo.style.transform='none';
-}
-btnNo.addEventListener('mouseenter', escapeBtn);
-btnNo.addEventListener('touchstart',  escapeBtn, {passive:true});
 
 /* Lluvia de corazones de la propuesta */
 function launchProposalHearts(){
